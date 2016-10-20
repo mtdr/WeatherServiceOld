@@ -36,8 +36,7 @@ public class weather {
     }
 
     public static String showWeather(String idCity) throws JAXBException, IOException {
-        String res;
-        res = "";
+        String res = "";
         YahooWeatherService service = new YahooWeatherService();
         List<Channel> channels = service.getForecastForLocation(idCity, DegreeUnit.CELSIUS).first(1);
         for (Channel channel:channels)
